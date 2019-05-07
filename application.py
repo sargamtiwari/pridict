@@ -1,5 +1,5 @@
-from flask import Flask
-from flask import jsonify
+from flask import Flask,jsonify
+ 
 app=Flask(__name__)
 @app.route("/")
 def hello():
@@ -27,6 +27,6 @@ def hello():
      
   result.columns = colgp
   result.index=['Week 18','Week 19','Week 20','Week 21']
-  return  return jsonify(result)
+  return jsonify(result)
 if __name__=='__main__' :
     app.run(host='0.0.0.0')
