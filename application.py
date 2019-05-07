@@ -28,10 +28,10 @@ def hello():
   result.columns = colgp
   result.index=['Week 18','Week 19','Week 20','Week 21']
   res= {}
-   for index, row in result.iterrows():
+  for index, row in result.iterrows():
         #result[index] = row.to_json() 
-        res[index] = dict(row)
-    return jsonify(res)
+      res[index] = dict(row)
+  return jsonify(res)
   
 if __name__=='__main__' :
     app.run(host='0.0.0.0')
