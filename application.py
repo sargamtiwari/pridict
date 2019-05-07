@@ -27,6 +27,7 @@ def hello():
      
   result.columns = colgp
   result.index=['Week 18','Week 19','Week 20','Week 21']
-  return jsonify(result)
+  Products_list = [result.columns.values.tolist()] + result.values.tolist()
+  return jsonify(Products_list)
 if __name__=='__main__' :
     app.run(host='0.0.0.0')
